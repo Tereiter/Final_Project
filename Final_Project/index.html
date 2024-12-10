@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project Plain Mockup (CSS)</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div id="assign_header"><h4>Reiter News</h4></div>
+    
+    <!-- Main Content -->
+    <h1>Rising Social Media Censorship: A Global Challenge to Free Speech</h1>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/F6QgM-N_ATo" title="Rise of Internet Suppression in the Digital Age" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h2>Governments worldwide are tightening their grip on digital platforms, raising concerns about the future of online free expression.</h2>
+    <p style="text-align: center;">Explore the data visualizations below to understand the key causes and platforms most affected by social media suppression.</p>
+    
+    <!-- Charts -->
+    <div class="charts-container">
+      <div class="chart">
+        <iframe title="Causes and Areas of Most Internet Suppression in the World." src="https://datawrapper.dwcdn.net/WfPd5/3/" scrolling="no"></iframe>
+      </div>
+      <div class="chart">
+        <iframe title="In 2023, protests are leading the way in explaining why countries censor their people on social media." src="https://datawrapper.dwcdn.net/JAwOQ/2/" scrolling="no"></iframe>
+      </div>
+    </div>
+
+    <!-- Dynamic Height Adjustment Script -->
+    <script type="text/javascript">
+      !function(){
+        "use strict";
+        window.addEventListener("message", function(event) {
+          if (event.data["datawrapper-height"]) {
+            var iframes = document.querySelectorAll("iframe");
+            for (var chartId in event.data["datawrapper-height"]) {
+              for (var i = 0; i < iframes.length; i++) {
+                if (iframes[i].contentWindow === event.source) {
+                  iframes[i].style.height = event.data["datawrapper-height"][chartId] + "px";
+                }
+              }
+            }
+          }
+        });
+      }();
+    </script>
+
+    <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #f1f1f1; border-top: 2px solid #ccc;">
+      <p>Data sourced from <a href="https://surfshark.com" target="_blank" style="color: blue; text-decoration: underline;">Surfshark</a>.</p>
+    </footer>
+  </body>
+</html>
